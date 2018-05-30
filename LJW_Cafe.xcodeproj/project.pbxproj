@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BD8A8DBBA42618B7B1F6950 /* Pods_LJW_Cafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C40762185C1DAEB1DE13F7F /* Pods_LJW_Cafe.framework */; };
 		CD84AD9120BC4AFC003E74F0 /* LJW_Cafe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD84AD8F20BC4AFC003E74F0 /* LJW_Cafe.xcdatamodeld */; };
 		CD84ADA820BC4B2A003E74F0 /* CartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD84AD9E20BC4B29003E74F0 /* CartTableViewController.swift */; };
 		CD84ADA920BC4B2A003E74F0 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD84AD9F20BC4B29003E74F0 /* MenuTableViewController.swift */; };
@@ -21,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22E93D186EB37CB68C25964C /* Pods-LJW_Cafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LJW_Cafe.release.xcconfig"; path = "Pods/Target Support Files/Pods-LJW_Cafe/Pods-LJW_Cafe.release.xcconfig"; sourceTree = "<group>"; };
+		7C40762185C1DAEB1DE13F7F /* Pods_LJW_Cafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LJW_Cafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0FA55CC1EFD982FDE410611 /* Pods-LJW_Cafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LJW_Cafe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LJW_Cafe/Pods-LJW_Cafe.debug.xcconfig"; sourceTree = "<group>"; };
 		CD84AD8520BC4AFC003E74F0 /* LJW_Cafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LJW_Cafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD84AD9020BC4AFC003E74F0 /* LJW_Cafe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LJW_Cafe.xcdatamodel; sourceTree = "<group>"; };
 		CD84AD9720BC4AFC003E74F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,17 +46,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BD8A8DBBA42618B7B1F6950 /* Pods_LJW_Cafe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FEBD9D679FA65B31A4F29F5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C0FA55CC1EFD982FDE410611 /* Pods-LJW_Cafe.debug.xcconfig */,
+				22E93D186EB37CB68C25964C /* Pods-LJW_Cafe.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		69576FD562F39D23FE8E9714 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C40762185C1DAEB1DE13F7F /* Pods_LJW_Cafe.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CD84AD7C20BC4AFC003E74F0 = {
 			isa = PBXGroup;
 			children = (
 				CD84AD8720BC4AFC003E74F0 /* LJW_Cafe */,
 				CD84AD8620BC4AFC003E74F0 /* Products */,
+				3FEBD9D679FA65B31A4F29F5 /* Pods */,
+				69576FD562F39D23FE8E9714 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,9 +115,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD84AD9A20BC4AFC003E74F0 /* Build configuration list for PBXNativeTarget "LJW_Cafe" */;
 			buildPhases = (
+				DCE4A2C0C58F279DAC2C58CD /* [CP] Check Pods Manifest.lock */,
 				CD84AD8120BC4AFC003E74F0 /* Sources */,
 				CD84AD8220BC4AFC003E74F0 /* Frameworks */,
 				CD84AD8320BC4AFC003E74F0 /* Resources */,
+				F4E0922AA2437CC50B589C27 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +177,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DCE4A2C0C58F279DAC2C58CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LJW_Cafe-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4E0922AA2437CC50B589C27 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LJW_Cafe/Pods-LJW_Cafe-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LJW_Cafe/Pods-LJW_Cafe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CD84AD8120BC4AFC003E74F0 /* Sources */ = {
@@ -280,6 +345,7 @@
 		};
 		CD84AD9B20BC4AFC003E74F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0FA55CC1EFD982FDE410611 /* Pods-LJW_Cafe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -297,6 +363,7 @@
 		};
 		CD84AD9C20BC4AFC003E74F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22E93D186EB37CB68C25964C /* Pods-LJW_Cafe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
