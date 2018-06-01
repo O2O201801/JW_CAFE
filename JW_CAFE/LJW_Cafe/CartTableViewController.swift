@@ -1,16 +1,15 @@
 //
-//  MenuTableViewController.swift
+//  CartTableViewController.swift
 //  CafeListView
 //
-//  Created by SWUCOMPUTER on 2018. 5. 2..
+//  Created by SWUCOMPUTER on 2018. 5. 28..
 //  Copyright © 2018년 SWUCOMPUTER. All rights reserved.
 //
 
 import UIKit
 
-class MenuTableViewController: UITableViewController {
+class CartTableViewController: UITableViewController {
 
-    var menuList: [String : Int]!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,36 +29,23 @@ class MenuTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        return appDelegate.menuList.count
-        return menuList.count
+        return 0
     }
 
-    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Menu Cell", for: indexPath) //as coffeeCell
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
-        let menus = Array(menuList.keys)
-        let menu = menus[indexPath.row]
-        let numCount: Int = menuList[menu]!
-        //cell.labelCoffeeName.text =
-        cell.textLabel?.text = menu
-        cell.detailTextLabel?.text = "\(numCount)원"
-        
-        //cell.textLabel?.text=menuList[indexPath.row]
-        
+
         return cell
     }
-    
-    
-    
+    */
 
     /*
     // Override to support conditional editing of the table view.
